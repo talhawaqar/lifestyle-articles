@@ -1,0 +1,21 @@
+.text-orange {
+  color:#DF5A24;
+  margin-right: 10px;
+}
+
+.text-orange-hover:hover {
+  color:#DF5A24 !important;
+}
+
+.copy {
+  justify-content: center;
+}
+.social-icons {
+  justify-content:flex-end;
+
+  a {
+    margin-right: 15px;
+    font-size: 15px;
+  }
+}
+

@@ -7,9 +7,74 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex">
+  <div class="w-25">
+    <a class="navbar-brand" href="#">People's Style</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  
+  <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+    <div class="align-self-center">
+      <ul class="navbar-nav text-uppercase">
+        <li class="nav-item">
+          <a class="nav-link text-orange-hover" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-orange-hover" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-orange-hover" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-orange-hover" href="#">Link</a>
+        </li>
+      </ul>
+    </div>
+    <div class="">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link border-right" href="#">Log in </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Log out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+</nav>
     <%= yield %>
+  <section id="footer" class="fixed-bottom bg-dark">
+    <div class="row">
+      <div class="col-md-3">
+        <a class="navbar-brand ml-3 font-weight-bold text-white" href="#">People's Style</a>
+      </div>
+      <div class="col-md-6 d-flex align-items-center copy">
+        <a class="text-orange text-orange-hover" href="#">Privacy Policy</a>
+        <a class="text-orange text-orange-hover" href="#">Terms & Conditions</a>
+        <span class="text-white">Copyright 2020 All rights reserved </span>
+      </div>
+      <div class="col-md-3 d-flex align-items-center social-icons">
+        <a href='#' class="text-white ">
+          <i class="fab fa-github text-orange-hover"></i>
+        </a>
+        <a href='#' class="text-white">
+          <i class="fab fa-linkedin-in text-orange-hover"></i>
+        </a>
+        <a href='#' class="text-white">
+          <i class="fab fa-twitter text-orange-hover"></i>
+        </a>
+      </div>
+    </div>
+  </section>
   </body>
 </html>
