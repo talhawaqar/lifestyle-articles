@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_18_043941) do
+ActiveRecord::Schema.define(version: 2020_10_20_172736) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -34,18 +34,19 @@ ActiveRecord::Schema.define(version: 2020_10_18_043941) do
   end
 
   create_table "articles", force: :cascade do |t|
-    t.integer "AuthorId"
-    t.string "Title"
-    t.text "Text"
+    t.string "title"
+    t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "author_id_id"
-    t.index ["author_id_id"], name: "index_articles_on_author_id_id"
+    t.integer "author_id"
+    t.index ["author_id"], name: "index_articles_on_author_id"
   end
 
-  create_table "articles_categories", id: false, force: :cascade do |t|
-    t.integer "article_id"
-    t.integer "category_id"
+  create_table "articles_categories", force: :cascade do |t|
+    t.integer "article_id", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["article_id"], name: "index_articles_categories_on_article_id"
     t.index ["category_id"], name: "index_articles_categories_on_category_id"
   end
@@ -79,7 +80,9 @@ ActiveRecord::Schema.define(version: 2020_10_18_043941) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "articles", "users", column: "author_id_id"
+  add_foreign_key "articles", "users", column: "author_id"
+  add_foreign_key "articles_categories", "articles"
+  add_foreign_key "articles_categories", "categories"
   add_foreign_key "votes", "authors"
   add_foreign_key "votes", "users"
 end
