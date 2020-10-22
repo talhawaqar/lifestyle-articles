@@ -28,6 +28,9 @@ class ArticlesController < ApplicationController
   def update
   end
 
+  def show
+  end
+
   def destroy
   end
 

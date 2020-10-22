@@ -1,9 +1,35 @@
 <h1 class="text-center mt-2"><%= @category.name %></h1>
-
 <div class="row no-gutters">
+  <% i = 0 %>
   <% @articles.in_groups_of(2, false) do |group| %>
     <% group.each do |article| %>
-      
+      <% if i.even? %>
+        <div class="col-12 col-md-6">
+          <div class="row no-gutters">
+            <div class="col-12 col-md-6 bg-article" style="background: url(<%= url_for(article.article_image) %>)">
+            </div>
+            <div class="col-12 col-md-6">
+              <h2><%= article.title%> </h2>
+              <p><%= short_text(article.text)  %></p>
+              <%= link_to 'Read More', article_path(article.id) %>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <div class="col-12 col-md-6">
+          <div class="row no-gutters">
+            <div class="col-12 col-md-6">
+              <h2><%= article.title%> </h2>
+              <p><%= short_text(article.text)  %></p>
+              <%= link_to 'Read More', article_path(article.id) %>
+            </div>
+            <div class="col-12 col-md-6 bg-article" style="background: url(<%= url_for(article.article_image) %>)">
+
+            </div>
+          </div>
+        </div>
+      <% end %>
     <% end %>
+    <% i = i+1 %>
   <% end %>
 </div>
