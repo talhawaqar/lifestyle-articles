@@ -1,2 +1,9 @@
-<h1>Category#show</h1>
-<p>Find me in app/views/category/show.html.erb</p>
+<h1 class="text-center mt-2"><%= @category.name %></h1>
+
+<div class="row no-gutters">
+  <% @articles.in_groups_of(2, false) do |group| %>
+    <% group.each do |article| %>
+      
+    <% end %>
+  <% end %>
+</div>
