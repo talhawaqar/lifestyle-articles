@@ -9,15 +9,11 @@
   <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
     <div class="align-self-center">
       <ul class="navbar-nav text-uppercase">
-        <li class="nav-item">
-          <a class="nav-link text-orange-hover" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-orange-hover" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-orange-hover" href="#">Link</a>
-        </li>
+        <% Category.all.each do |category| %>
+          <li class="nav-item">
+            <%= link_to category.name, category_show_path('id' => category.id), class: 'nav-link text-orange-hover' %>
+          </li>
+        <% end %>
         <li class="nav-item">
           <%= link_to 'Write Article', new_article_path, class: 'nav-link text-orange-hover' %>
         </li>
