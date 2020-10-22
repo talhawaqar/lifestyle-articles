@@ -1,0 +1,32 @@
+<%= form_with model: @article, class: 'form py-5 pl-5', id: 'test_article' do |f| %>
+  <%= form_group_for f, :article_image, label: false  do %>
+    <div class="input-group">
+      <%= label_tag(:article_image, "Choose Image", class: 'ml-2 mt-2') %>
+      <%= f.file_field :article_image %>
+    </div>
+  <% end %>
+
+  <%= form_group_for f, :title, label: false  do %>
+    <div class="input-group">
+      <%= label_tag(:title, "Title", class: 'm-2') %>
+      <%= f.text_field :title, class: 'form-control', placeholder: 'Enter Article Title', autofocus: true %>
+    </div>
+  <% end %>
+
+  <%= form_group_for f, :text, label: false  do %>
+    <div class="input-group">
+      <%= label_tag(:text, "Text", class: 'm-2') %>
+      <%= f.text_area(:text ,size: "24x6", class: 'form-control') %>
+    </div>
+  <% end %>
+
+  <% @categories.each do |category|  %>
+    <%= check_box_tag 'article[categories][]', category.id %>
+    <span><%= category.name %></span>
+  <% end %>  
+
+
+  <div class="d-flex flex-row align-items-center pr-2">
+    <%= f.submit "Add Artucle", class: "btn btn-success mb-1" %>
+  </div>
+<% end %>

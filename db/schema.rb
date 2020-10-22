@@ -72,10 +72,10 @@ ActiveRecord::Schema.define(version: 2020_10_20_172736) do
 
   create_table "votes", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "author_id", null: false
+    t.integer "article_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["author_id"], name: "index_votes_on_author_id"
+    t.index ["article_id"], name: "index_votes_on_article_id"
     t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
@@ -83,6 +83,6 @@ ActiveRecord::Schema.define(version: 2020_10_20_172736) do
   add_foreign_key "articles", "users", column: "author_id"
   add_foreign_key "articles_categories", "articles"
   add_foreign_key "articles_categories", "categories"
-  add_foreign_key "votes", "authors"
+  add_foreign_key "votes", "articles"
   add_foreign_key "votes", "users"
 end
