@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'category/show'
   root 'home#index'
   get 'homme/index'
   devise_for :users
