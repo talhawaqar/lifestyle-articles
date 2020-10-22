@@ -1,12 +1,31 @@
-<section id="feature-article">
-  <div class="row">
-    <div class="col-12">
-    </div>
+<section class="feature-article" id="feature-article" style="background: url(<%= url_for(@feature_article.article_image)%>)">
+  <div class="overlay"></div>
+  <div class = "lower-text">
+    <span class="title">
+      <%=@feature_article.title %>
+    </span>
+    <br/>
+    <span class="text-white">
+      <%= short_text(@feature_article.text)  %>
+    </span>
+    <br/>
+    <span class="text-white">
+      <%= @feature_article.created_at %>
+    </span>
   </div>
 </section>
 <section id="categories">
-  <div class="row">
-    <div class="col-12 col-md-3">
-    </div>
+  <div class="row no-gutters">
+    <% @categories.each  do |category| %>
+      <div class="col-12 col-md-3">
+
+        <%= link_to category_show_path('id' => category.id), :class => 'button white' do %>
+          <div class="category" style="background: url(<%= url_for(category_image(category))%>">
+            <span class="category-title"><%= category.name %></span>
+            <span class="category-text"><%= category.articles.last.title %></span>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </section>
