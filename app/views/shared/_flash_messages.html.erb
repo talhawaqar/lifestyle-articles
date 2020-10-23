@@ -11,7 +11,7 @@
      <% end %>
      <% if flash[:danger] %>
        var $toastContent = $('<span><%= flash[:danger] %></span>');
-       toastr.error('hello')
+       toastr.error($toastContent)
      <% end %>
      <% if flash[:error] %>
        var $toastContent = $('<span><%= flash[:error] %></span>');
