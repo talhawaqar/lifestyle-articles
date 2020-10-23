@@ -14,6 +14,7 @@
   </head>
 
   <body>
+    <%= render :partial => 'shared/flash_messages', :flash => flash %>
     <%= render 'shared/navbar'%>
     <%= yield %>
     <%= render 'shared/footer' %>

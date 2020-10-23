@@ -16,6 +16,7 @@ RSpec.describe Article, type: :model do
     context 'associations' do
       it { should have_many(:categories) }
       it { should have_many(:articles_categories) }
+      it { should have_many(:votes) }
       it { should belong_to(:user) }
       it { should have_one_attached(:article_image) }
     end

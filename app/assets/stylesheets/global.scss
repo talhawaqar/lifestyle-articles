@@ -1,72 +1,134 @@
 .text-orange {
-  color:#DF5A24;
+  color: #DF5A24;
   margin-right: 10px;
 }
 
 .text-orange-hover:hover {
-  color:#DF5A24 !important;
+  color: #DF5A24 !important;
 }
 
 .copy {
   justify-content: center;
 }
-.social-icons {
-  justify-content:flex-end;
 
+.social-icons {
+  justify-content: flex-end;
   a {
     margin-right: 15px;
     font-size: 15px;
   }
 }
 
+.a-title-width {
+  max-width: 500px;
+}
+
+.a-article-width {
+  max-width: 500px;
+}
+
+.field-width {
+  max-width: 200px;
+}
+
+.margin-100 {
+  margin-left: 100px;
+}
+
+.margin-69 {
+  margin-left: 69px;
+}
+
 .feature-article {
   position: relative;
-  height:80vh;
-  width:100%;
+  height: 80vh;
+  width: 100%;
 }
 
 .overlay {
   position: absolute;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   background: rgba(255, 0, 0, 0.1);
-  z-index:2;
+  z-index: 2;
 }
 
 .lower-text {
-  position:absolute;
-  bottom:20px;
+  position: absolute;
+  bottom: 20px;
   left: 30px;
-  z-index:4;
+  z-index: 4;
 }
 
 .title {
-  color:green;
+  color: green;
   font-weight: bold;
   font-size: 20px;
   text-transform: uppercase;
 }
 
 .category {
-  position:relative;
+  position: relative;
+
   height: 300px;
   .category-title {
-    position:absolute;
+    position: absolute;
     color: white;
     font-weight: bold;
     font-size: 20px;
-    top:20px;
-    left:20px;
+    top: 20px;
+    left: 20px;
     text-transform: uppercase;
     text-decoration: underline;
     text-decoration-color: green;
   }
   .category-text {
-    position:absolute;
+    position: absolute;
     color: white;
     font-weight: bold;
-    bottom:20px;
-    left:20px;
+    bottom: 20px;
+    left: 20px;
     text-transform: uppercase;
   }
+}
+
+.bg-article {
+  width:100%;
+  height:300px;
+  background-size: cover;
+}
+
+.cat-show-tile {
+  display: inline-block;
+  margin-left: 20px;
+  color: #DF5A24;
+  text-decoration: underline;
+  text-decoration-color: green;
+}
+
+.article-title {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 18px;
+  width:80%; 
+}
+
+.article-detail {
+  margin-top: 3px;
+  margin-left: 20px;
+  font-size: 16px;
+  width:80%;
+}
+
+.read-more {
+  margin-left: 20px;
+  color: green;
+}
+
+.main-image {
+  width:80%;
+  height:500px;
+}
+.icon-links {
+  margin-bottom:50px;
 }

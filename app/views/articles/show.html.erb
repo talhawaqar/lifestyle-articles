@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="font-weight-bold mt-3 w-75"><%= @article.title%></h2>
+      <%= image_tag(url_for(@article.article_image), alt: "Article Image", class: "main-image")%>
+      <p class="w-75 article-detail ml-0 mt-3"><%= @article.text%></p>
+      <div class="icon-links">
+        <% if current_user %>
+          <%= link_to vote_article_path(@article.id), method: :post,class: 'text-success mr-2' do %>
+            <span class="vorder-round"> <%= @article.votes.count %> </span>
+            <i class="fas fa-thumbs-up"></i>
+          <% end %>
+          <% if current_user.id == @article.author_id%>
+            <%= link_to edit_article_path(@article.id), class: 'mr-2' do %>
+              <i class="fas fa-edit"></i>
+            <% end %>
+            <%= link_to article_path(@article.id), method: :delete, class: 'text-danger' do %>
+              <i class="fas fa-trash-alt"></i>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>  
+</div>
