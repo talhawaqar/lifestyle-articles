@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
@@ -11,7 +13,6 @@ RSpec.describe Category, type: :model do
     context 'validates priority' do
       it { should validate_presence_of(:priority) }
     end
-
 
     context 'associations' do
       it { should have_many(:articles_categories) }

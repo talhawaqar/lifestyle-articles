@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 module FormHelper
   def errors_for(form, field)
     content_tag(:p, form.object.errors[field].try(:first), class: 'help-block')
   end
 
   def form_group_for(form, field, opts = {}, &block)
-    label = opts.fetch(:label) { true }
+    label = opts.fetch(:label, true)
     has_errors = form.object.errors[field].present?
 
     content_tag :div, class: "form-group #{'has-error' if has_errors}" do
