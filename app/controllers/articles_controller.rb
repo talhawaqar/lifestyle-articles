@@ -4,7 +4,9 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: %i[new edit]
   before_action :find_article, only: %i[show edit update destroy]
 
-  def index; end
+  def index
+    @articles = Article.all
+  end
 
   def new
     @article = Article.new
