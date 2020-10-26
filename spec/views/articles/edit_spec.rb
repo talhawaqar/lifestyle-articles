@@ -1,5 +1,5 @@
 require 'rails_helper'
-RSpec.describe 'Add Article', type: :feature do
+RSpec.describe 'Edit Article', type: :feature do
   file = Rails.root.join('spec', 'test_img.jpg')
   image = ActiveStorage::Blob.create_after_upload!(
     io: File.open(file, 'rb'),
@@ -19,7 +19,7 @@ RSpec.describe 'Add Article', type: :feature do
 
   DatabaseCleaner.start
 
-  it 'Adds new Article' do
+  it 'Edit Article' do
     visit edit_article_path(article.id)
     within('#new_user') do
       fill_in 'user[email]', with: 'dev@ugobensaid.test'
