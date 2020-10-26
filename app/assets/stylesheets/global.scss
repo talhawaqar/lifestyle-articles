@@ -69,6 +69,7 @@
 
 .category {
   position: relative;
+  background-size: cover !important;
 
   height: 300px;
   .category-title {
@@ -95,7 +96,7 @@
 .bg-article {
   width:100%;
   height:300px;
-  background-size: cover;
+  background-size: cover !important;
 }
 
 .cat-show-tile {
