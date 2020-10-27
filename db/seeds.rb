@@ -8,6 +8,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# rubocop:disable Layout/LineLength
+
 c1 = Category.create(name: 'Business', priority: 1)
 c2 = Category.create(name: 'Education', priority: 2)
 c3 = Category.create(name: 'Entertainment', priority: 3)
@@ -50,3 +52,5 @@ image = ActiveStorage::Blob.create_after_upload!(
   content_type: 'image/jpeg'
 ).signed_id
 Article.create(title: 'Fourth Article', text: 'Fourth Setup Article', article_image: image, categories: [c1, c4], author_id: user.id)
+
+# rubocop:enable Layout/LineLength

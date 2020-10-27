@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module FormHelper
   def errors_for(form, field)
     content_tag(:p, form.object.errors[field].try(:first), class: 'help-block')

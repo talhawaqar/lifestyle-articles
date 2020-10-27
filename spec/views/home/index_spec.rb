@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# rubocop:disable Layout/LineLength
 
 require 'rails_helper'
 describe 'the homepage', type: :feature do
@@ -29,3 +29,5 @@ describe 'the homepage', type: :feature do
 
   DatabaseCleaner.clean
 end
+
+# rubocop:enable Layout/LineLength

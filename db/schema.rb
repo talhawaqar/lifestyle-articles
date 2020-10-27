@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -11,6 +10,7 @@
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
+# rubocop:disable Metrics/BlockLength
 
 ActiveRecord::Schema.define(version: 20_201_020_172_736) do
   create_table 'active_storage_attachments', force: :cascade do |t|

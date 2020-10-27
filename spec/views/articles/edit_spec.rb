@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# rubocop:disable Layout/LineLength
 
 require 'rails_helper'
 RSpec.describe 'Edit Article', type: :feature do
@@ -41,3 +41,4 @@ RSpec.describe 'Edit Article', type: :feature do
 
   DatabaseCleaner.clean
 end
+# rubocop:enable Layout/LineLength
