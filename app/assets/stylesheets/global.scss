@@ -1,10 +1,10 @@
 .text-orange {
-  color: #DF5A24;
+  color: #df5a24;
   margin-right: 10px;
 }
 
 .text-orange-hover:hover {
-  color: #DF5A24 !important;
+  color: #df5a24 !important;
 }
 
 .copy {
@@ -13,6 +13,7 @@
 
 .social-icons {
   justify-content: flex-end;
+
   a {
     margin-right: 15px;
     font-size: 15px;
@@ -70,8 +71,8 @@
 .category {
   position: relative;
   background-size: cover !important;
-
   height: 300px;
+
   .category-title {
     position: absolute;
     color: white;
@@ -83,6 +84,7 @@
     text-decoration: underline;
     text-decoration-color: green;
   }
+
   .category-text {
     position: absolute;
     color: white;
@@ -94,15 +96,15 @@
 }
 
 .bg-article {
-  width:100%;
-  height:300px;
+  width: 100%;
+  height: 300px;
   background-size: cover !important;
 }
 
 .cat-show-tile {
   display: inline-block;
   margin-left: 20px;
-  color: #DF5A24;
+  color: #df5a24;
   text-decoration: underline;
   text-decoration-color: green;
 }
@@ -111,14 +113,14 @@
   display: inline-block;
   margin-left: 20px;
   font-size: 18px;
-  width:80%; 
+  width: 80%;
 }
 
 .article-detail {
   margin-top: 3px;
   margin-left: 20px;
   font-size: 16px;
-  width:80%;
+  width: 80%;
 }
 
 .read-more {
@@ -127,9 +129,10 @@
 }
 
 .main-image {
-  width:80%;
-  height:500px;
+  width: 80%;
+  height: 500px;
 }
+
 .icon-links {
-  margin-bottom:50px;
+  margin-bottom: 50px;
 }
