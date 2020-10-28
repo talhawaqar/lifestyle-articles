@@ -1,4 +1,4 @@
-<section class="feature-article" id="feature-article" style="background: url(<%= url_for(@feature_article.article_image )%>)">
+<section class="feature-article" id="feature-article" style="background: url(<%= url_for(@feature_article.article_image)%>); background-repeat: no-repeat; background-size:cover;">
   <%= link_to article_path(@feature_article.id) do %>
     <div class="overlay"></div>
     <div class = "lower-text">
