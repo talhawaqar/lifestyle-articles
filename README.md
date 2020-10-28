@@ -26,7 +26,7 @@ Its an app for articles.
 
 ## Demo
 
-[Live link]()
+[Live link](https://legendsbedarticle.herokuapp.com/)
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ In order to make the program work, you need to have ruby interpreter installed i
 To get a local copy of the repository please run the following commands on your terminal:
 
 ```
-$ cd <folder>
+$ cd lifesyle-articles
 ```
 
 ```bash
