@@ -4,11 +4,11 @@
 
 ## What it does
 
-Its an app for articles.
+It's an app for articles.
 
 *As a guest user:*
 
-- You will be able to create account/log in.
+- You will be able  to create account/log in.
 - You will be able to see all articles of other users.
 - You will not able to write your article.
 - You will not able to give a vote to an article.

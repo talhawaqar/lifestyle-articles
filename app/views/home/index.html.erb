@@ -20,9 +20,8 @@
   <div class="row no-gutters">
     <% @categories.each  do |category| %>
       <div class="col-12 col-md-3">
-
         <%= link_to category_show_path('id' => category.id), :class => 'button white' do %>
-          <div class="category" style="background: url(<%= url_for(category_image(category))%>">
+          <div class="category" style="background: url(<%= url_for(category_image(category))%>); background-size:cover !important ">
             <span class="category-title"><%= category.name %></span>
             <span class="category-text"><%= category.articles.last.title %></span>
           </div>

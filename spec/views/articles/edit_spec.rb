@@ -32,7 +32,7 @@ RSpec.describe 'Edit Article', type: :feature do
       fill_in 'article[title]', with: 'New one'
       fill_in 'article[text]', with: 'New test article'
       find("input[type='checkbox'][value='#{category.id}']").set(true)
-      attach_file('article[article_image]', "#{Rails.root}spec/test_img.jpg")
+      attach_file('article[article_image]', "#{Rails.root}/spec/test_img.jpg")
     end
     click_button 'Edit Article'
     sleep(1)
