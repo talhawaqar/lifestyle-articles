@@ -31,6 +31,7 @@ gem 'devise'
 
 gem 'rubocop'
 
+gem 'cloudinary'
 gem 'pg'
 
 group :development, :test do

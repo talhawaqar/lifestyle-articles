@@ -4,11 +4,11 @@
 
 ## What it does
 
-Its an app for articles.
+It's an app for articles.
 
 *As a guest user:*
 
-- You will be able to create account/log in.
+- You will be able  to create account/log in.
 - You will be able to see all articles of other users.
 - You will not able to write your article.
 - You will not able to give a vote to an article.
@@ -26,7 +26,7 @@ Its an app for articles.
 
 ## Demo
 
-[Live link]()
+[Live link](https://legendsbedarticle.herokuapp.com/)
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ In order to make the program work, you need to have ruby interpreter installed i
 To get a local copy of the repository please run the following commands on your terminal:
 
 ```
-$ cd <folder>
+$ cd lifesyle-articles
 ```
 
 ```bash
