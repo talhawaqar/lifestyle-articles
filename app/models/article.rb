@@ -7,4 +7,5 @@ class Article < ApplicationRecord
 
   validates :title, presence: true
   validates :text, presence: true
+  scope :desc, -> { order(created_at: :desc) }
 end
