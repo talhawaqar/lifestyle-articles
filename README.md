@@ -26,7 +26,7 @@ It's an app for articles.
 
 ## Demo
 
-[Live link](https://legendsbedarticle.herokuapp.com/)
+[Live link](https://legendaryarticle.herokuapp.com/)
 
 ## Prerequisites
 
