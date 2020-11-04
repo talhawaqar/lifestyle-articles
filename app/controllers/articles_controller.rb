@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :find_article, only: %i[show edit update destroy]
 
   def index
-    @articles = Article.includes(:users).desc
+    @articles = Article.includes(:user).desc
   end
 
   def new
