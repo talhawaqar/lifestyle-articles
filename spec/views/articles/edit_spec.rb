@@ -10,7 +10,7 @@ RSpec.describe 'Edit Article', type: :feature do
   ).signed_id
 
   let!(:user) do
-    User.create(email: 'dev@ugobensaid.test', password: '123456')
+    User.create(email: 'dev@ugobensaid.test', username: 'webdev', password: '123456')
   end
   let!(:category) { Category.create(name: 'test cat', priority: 1) }
 
