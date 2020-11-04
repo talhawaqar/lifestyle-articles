@@ -66,3 +66,5 @@ Give a :star:️ if you like this project!
 ## Acknowledgments
 
 - <a href="https://guides.rubyonrails.org/" target="_blank">Rails Guides</a>
+- Thanks for this Website Design [Nelson Sakwa
+](https://www.behance.net/sakwadesignstudio).

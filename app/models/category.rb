@@ -5,4 +5,5 @@ class Category < ApplicationRecord
   validates :name, presence: true
   validates :priority, presence: true
   validates :priority, numericality: { only_integer: true }
+  scope :prior, -> { order(priority: :desc) }
 end

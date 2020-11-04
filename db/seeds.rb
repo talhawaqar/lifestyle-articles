@@ -22,7 +22,7 @@ image = ActiveStorage::Blob.create_after_upload!(
   content_type: 'image/jpg'
 ).signed_id
 
-user = User.create(email: 'dev@lifestyle.com', password: '123456')
+user = User.create(username: 'dev' ,email: 'dev@lifestyle.com', password: '123456')
 
 article = Article.create(title: 'First Article', text: 'First Setup Article', article_image: image, categories: [c1, c2], author_id: user.id)
 
