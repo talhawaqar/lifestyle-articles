@@ -4,7 +4,7 @@ RSpec.describe ArticlesController, type: :controller do
   let!(:user) do
     User.create(email: 'dev@ugobensaid.test', username: 'devtest', password: '123456')
   end
-  let!(:article) { Article.create(title: 'test article', text: 'Test Body', author_id: user.id) }
+  let!(:article) { Article.create(title: 'test article', text: 'Test Body asd', author_id: user.id) }
 
   DatabaseCleaner.start
 
