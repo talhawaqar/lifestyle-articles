@@ -24,6 +24,10 @@ It's an app for articles.
 - Rails 6.0.3.2
 - VS Code
 
+## Screenshot
+
+Project Design Screenshot : ![Project Design](app/assets/images/home.jpg)
+
 ## Demo
 
 [Live link](https://legendaryarticle.herokuapp.com/)
