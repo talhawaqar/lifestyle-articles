@@ -40,6 +40,8 @@ RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
 
   config.include Devise::TestHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::IntegrationHelpers, type: :request
 
   # # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false

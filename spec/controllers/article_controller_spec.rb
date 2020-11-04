@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe ArticlesController, type: :controller do
   let!(:user) do
-    User.create(email: 'dev@ugobensaid.test', password: '123456')
+    User.create(email: 'dev@ugobensaid.test', username: 'devtest', password: '123456')
   end
   let!(:article) { Article.create(title: 'test article', text: 'Test Body', author_id: user.id) }
 
