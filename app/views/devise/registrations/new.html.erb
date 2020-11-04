@@ -1,0 +1,41 @@
+
+  <div class="w-100 d-flex flex-column align-items-center py-2">
+    <h2 class="my-3">Sign Up</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => ''}) do |f| %>
+      <%= form_group_for f, :username, label: false  do %>
+        <div class="input-group">
+        <label for="username" class="mt-1">Username</label>
+        <%= f.text_field :username, class: 'form-control margin-65 field-width', placeholder: 'Enter Username', autofocus: true, autocomplete: "username" %>
+        </div>
+      <% end %>
+      <%= form_group_for f, :email, label: false  do %>
+        <div class="input-group">
+        <label for="email" class="mt-1">Email</label>
+        <%= f.email_field :email, class: 'form-control margin-100 field-width', placeholder: 'Enter Email', autofocus: true, autocomplete: "email" %>
+        </div>
+      <% end %>
+      <%= form_group_for f, :password, label: false  do %>
+        <div class="input-group">
+            <label for="password" class="mt-1">Password</label>
+            <%= f.password_field :password, class: 'form-control field-width margin-69', placeholder: 'Password', autocomplete: "new-password" %>
+            <br />
+          <% if @minimum_password_length %>
+            <em class="mt-1 ">(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %>
+          <br />
+        </div>
+      <% end %>
+      <%= form_group_for f, :password_confirmation, label: false  do %>
+        <div class="input-group">
+          <label for="password" class="mt-1">Confirm Password</label>
+          <%= f.password_field :password_confirmation, class: 'form-control field-width ml-2', placeholder: 'Confirm Password', autofocus: true, autocomplete: "new-password" %>
+        </div>
+      <% end %>
+      <div class="actions d-flex flex-row p-3">
+        <%= f.submit "Sign up", :class => "btn btn-secondary" %>
+        <p class="mx-1 pt-2">Already have an account? </p>
+        <%= render "devise/shared/links" %>
+      </div>
+    <% end %>
+  </div>    
+

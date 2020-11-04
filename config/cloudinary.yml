@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dp8rehvec
+  api_key: '946478719534525'
+  api_secret: nJ7Ikw1xwSzLe5VZ_Bd-EsdwHc0
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dp8rehvec
+  api_key: '946478719534525'
+  api_secret: nJ7Ikw1xwSzLe5VZ_Bd-EsdwHc0
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dp8rehvec
+  api_key: '946478719534525'
+  api_secret: nJ7Ikw1xwSzLe5VZ_Bd-EsdwHc0
+  enhance_image_tag: true
+  static_file_support: false

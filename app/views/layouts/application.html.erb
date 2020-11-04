@@ -7,9 +7,16 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
   </head>
 
   <body>
+    <%= render :partial => 'shared/flash_messages', :flash => flash %>
+    <%= render 'shared/navbar'%>
     <%= yield %>
+    <%= render 'shared/footer' %>
   </body>
 </html>
