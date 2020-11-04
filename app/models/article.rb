@@ -5,7 +5,7 @@ class Article < ApplicationRecord
   has_many :votes, dependent: :destroy
   has_one_attached :article_image, dependent: :destroy
 
-  validates :title, presence: true, length: {minimum: 3, maximum: 50}
-  validates :text, presence: true, length: {minimum: 10, maximum: 500}
+  validates :title, presence: true, length: { minimum: 3, maximum: 50 }
+  validates :text, presence: true, length: { minimum: 10, maximum: 500 }
   scope :desc, -> { order(created_at: :desc) }
 end
